@@ -13,7 +13,6 @@
 		653698D3260FAC6D0073530A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653698D1260FAC6D0073530A /* Main.storyboard */; };
 		653698D5260FAC720073530A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653698D4260FAC720073530A /* Assets.xcassets */; };
 		653698D8260FAC720073530A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653698D6260FAC720073530A /* LaunchScreen.storyboard */; };
-		653698E3260FAC720073530A /* mobile_coding_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653698E2260FAC720073530A /* mobile_coding_challengeTests.swift */; };
 		653698EF260FB0360073530A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653698EE260FB0360073530A /* MainPresenter.swift */; };
 		653698F1260FB0F70073530A /* MainDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653698F0260FB0F70073530A /* MainDefinitions.swift */; };
 		653698F6260FB3E70073530A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653698F5260FB3E70073530A /* APIManager.swift */; };
@@ -28,6 +27,8 @@
 		6536990C260FEE300073530A /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536990B260FEE300073530A /* DetailsInteractor.swift */; };
 		6536990E260FEE3B0073530A /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536990D260FEE3B0073530A /* DetailsRouter.swift */; };
 		6536991126102E3B0073530A /* ZoomAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536991026102E3B0073530A /* ZoomAnimationDelegate.swift */; };
+		653699132610DF840073530A /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653699122610DF840073530A /* MainPresenterTests.swift */; };
+		653699152610E2D10073530A /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653699142610E2D10073530A /* DetailsPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 		653698D7260FAC720073530A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		653698D9260FAC720073530A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653698DE260FAC720073530A /* mobile-coding-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-coding-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		653698E2260FAC720073530A /* mobile_coding_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_coding_challengeTests.swift; sourceTree = "<group>"; };
 		653698E4260FAC720073530A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653698EE260FB0360073530A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		653698F0260FB0F70073530A /* MainDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefinitions.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		6536990B260FEE300073530A /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		6536990D260FEE3B0073530A /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		6536991026102E3B0073530A /* ZoomAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimationDelegate.swift; sourceTree = "<group>"; };
+		653699122610DF840073530A /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		653699142610E2D10073530A /* DetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +125,9 @@
 		653698E1260FAC720073530A /* mobile-coding-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				653698E2260FAC720073530A /* mobile_coding_challengeTests.swift */,
 				653698E4260FAC720073530A /* Info.plist */,
+				653699122610DF840073530A /* MainPresenterTests.swift */,
+				653699142610E2D10073530A /* DetailsPresenterTests.swift */,
 			);
 			path = "mobile-coding-challengeTests";
 			sourceTree = "<group>";
@@ -330,7 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				653698E3260FAC720073530A /* mobile_coding_challengeTests.swift in Sources */,
+				653699132610DF840073530A /* MainPresenterTests.swift in Sources */,
+				653699152610E2D10073530A /* DetailsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
