@@ -72,3 +72,14 @@ extension DetailsView: DetailsPresenterDelegate { }
 
 // MARK: - MainRouterDelegate
 extension DetailsView: DetailsRouterDelegate { }
+
+// MARK: - ZoomAnimationDelegate
+extension DetailsView: ZoomViewController {
+    func zoomBackgroundView(for transition: ZoomAnimationDelegate) -> UIView? {
+        return nil
+    }
+    
+    func zoomImageView(for transition: ZoomAnimationDelegate) -> UIImageView? {
+        return imageView
+    }
+}

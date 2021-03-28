@@ -27,6 +27,7 @@
 		6536990A260FEE1F0073530A /* DetailsDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65369909260FEE1F0073530A /* DetailsDefinitions.swift */; };
 		6536990C260FEE300073530A /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536990B260FEE300073530A /* DetailsInteractor.swift */; };
 		6536990E260FEE3B0073530A /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536990D260FEE3B0073530A /* DetailsRouter.swift */; };
+		6536991126102E3B0073530A /* ZoomAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536991026102E3B0073530A /* ZoomAnimationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		65369909260FEE1F0073530A /* DetailsDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDefinitions.swift; sourceTree = "<group>"; };
 		6536990B260FEE300073530A /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		6536990D260FEE3B0073530A /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		6536991026102E3B0073530A /* ZoomAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		653698CA260FAC6D0073530A /* mobile-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				6536990F26102E190073530A /* Common */,
 				653698FF260FBB4E0073530A /* Extensions */,
 				653698F3260FB3980073530A /* Network */,
 				653698F2260FB38B0073530A /* Modules */,
@@ -192,6 +195,14 @@
 				6536990D260FEE3B0073530A /* DetailsRouter.swift */,
 			);
 			path = DeatilsView;
+			sourceTree = "<group>";
+		};
+		6536990F26102E190073530A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6536991026102E3B0073530A /* ZoomAnimationDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				653698F1260FB0F70073530A /* MainDefinitions.swift in Sources */,
 				653698D0260FAC6D0073530A /* MainView.swift in Sources */,
 				653698CC260FAC6D0073530A /* AppDelegate.swift in Sources */,
+				6536991126102E3B0073530A /* ZoomAnimationDelegate.swift in Sources */,
 				653698CE260FAC6D0073530A /* SceneDelegate.swift in Sources */,
 				65369906260FEDF30073530A /* DetailsView.swift in Sources */,
 				653698F8260FB4C90073530A /* MainInteractor.swift in Sources */,

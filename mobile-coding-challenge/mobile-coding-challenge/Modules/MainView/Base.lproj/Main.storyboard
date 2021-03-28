@@ -82,10 +82,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="xZt-PW-DKZ" id="NAQ-TO-bWr"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="28L-IG-qWS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kd-EO-SBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="xZt-PW-DKZ" customClass="ZoomAnimationDelegate" customModule="mobile_coding_challenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>

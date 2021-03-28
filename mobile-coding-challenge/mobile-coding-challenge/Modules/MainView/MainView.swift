@@ -12,6 +12,7 @@ class MainView: UIViewController {
 
     // MARK: - variables
     lazy var presenter: MainPresenter = .init(delegate: self, routerDelegate: self)
+    private var selectedIndexPath: IndexPath?
     
     // MARK: - outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,7 +53,7 @@ extension MainView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
+        selectedIndexPath = indexPath
         presenter.showImageDetails(index: indexPath.row)
     }
 }
@@ -69,4 +70,20 @@ extension MainView: MainPresenterDelegate {
 // MARK: - MainRouterDelegate
 extension MainView: MainRouterDelegate {
     
+}
+
+// MARK: - ZoomAnimationDelegate
+extension MainView: ZoomViewController {
+    func zoomBackgroundView(for transition: ZoomAnimationDelegate) -> UIView? {
+        return nil
+    }
+    
+    func zoomImageView(for transition: ZoomAnimationDelegate) -> UIImageView? {
+        if let indexPath = selectedIndexPath,
+            let cell = collectionView.cellForItem(at: indexPath),
+            let cellImage = cell.viewWithTag(MainViewConstants.Ints.iamgeViewTag) as? UIImageView {
+                return cellImage
+        }
+        return nil
+    }
 }
