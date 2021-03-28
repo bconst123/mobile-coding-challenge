@@ -46,16 +46,20 @@ final class DetailsPresenter {
         return nil
     }
     
-    func addOneToImage() {
-        if let selectedIndex = selectedIndex {
+    func addOneToImage() -> Bool {
+        if let selectedIndex = selectedIndex, let imageArray = imageArray, imageArray.count - 1 >= selectedIndex + 1 {
             self.selectedIndex = selectedIndex + 1
+            return true
         }
+        return false
     }
     
-    func subtractOneToImage() {
-        if let selectedIndex = selectedIndex {
+    func subtractOneToImage() -> Bool {
+        if let selectedIndex = selectedIndex, 0 <= selectedIndex - 1 {
             self.selectedIndex = selectedIndex - 1
+            return true
         }
+        return false
     }
 }
 

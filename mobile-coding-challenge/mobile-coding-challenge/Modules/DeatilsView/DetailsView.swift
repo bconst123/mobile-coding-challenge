@@ -22,6 +22,14 @@ class DetailsView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     func setup(arrayImages: [UnsplashModel], index: Int) {
@@ -39,6 +47,23 @@ class DetailsView: UIViewController {
             labelDescription.text = imageDescription
             labelDescription.layoutIfNeeded()
         }
+    }
+}
+
+// MARK: - Gestures Handlers
+extension DetailsView {
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+       if gesture.direction == .right {
+            if presenter.subtractOneToImage() {
+                imageView.rightToLeftAnimation()
+                setUpView()
+            }
+       } else if gesture.direction == .left {
+            if presenter.addOneToImage() {
+                imageView.leftToRightAnimation()
+                setUpView()
+            }
+       }
     }
 }
 
