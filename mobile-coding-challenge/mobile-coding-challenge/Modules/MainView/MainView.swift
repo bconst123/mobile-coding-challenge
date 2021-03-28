@@ -10,10 +10,10 @@ import UIKit
 
 class MainView: UIViewController {
 
-    // MARK: -
+    // MARK: - variables
     lazy var presenter: MainPresenter = .init(delegate: self, routerDelegate: self)
     
-    // MARK: -
+    // MARK: - outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - overrides

@@ -9,6 +9,8 @@
 import Foundation
 
 final class DetailsPresenter {
+    
+    // MARK: - private variables
     private lazy var interactor: DetailsInteractor = .init(delegate: self)
     private weak var delegate: DetailsPresenterDelegate?
     private var router: DetailsRouter?

@@ -10,10 +10,10 @@ import UIKit
 
 class DetailsView: UIViewController {
 
-    // MARK: -
+    // MARK: - variables
     lazy var presenter: DetailsPresenter = .init(delegate: self, routerDelegate: self)
     
-    // MARK: -
+    // MARK: - outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelID: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
