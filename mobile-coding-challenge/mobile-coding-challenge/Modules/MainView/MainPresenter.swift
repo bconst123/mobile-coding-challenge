@@ -19,10 +19,6 @@ final class MainPresenter {
         router = .init(delegate: routerDelegate)
     }
     
-    func setup() {
-        
-    }
-    
     func callApi(startAt: Int) {
         interactor.fetchUnsplashAPI(offset: startAt)
     }
@@ -48,7 +44,7 @@ final class MainPresenter {
 // MARK: - MainInteractorDelegate
 extension MainPresenter: MainInteractorDelegate {
     func errorLoading() {
-        print("Error")
+        print("Error Loading Photos")
     }
     
     func didLoad(response: [UnsplashModel]) {

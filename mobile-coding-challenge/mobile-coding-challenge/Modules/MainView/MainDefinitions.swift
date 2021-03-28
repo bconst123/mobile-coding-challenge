@@ -29,5 +29,17 @@ struct MainViewConstants {
     struct Strings {
         static let cellIdentifier = "collectionCell"
         static let viewName = "Photos"
+        static let storyboardId = "Details"
+        static let controllerId = "DetailsView"
+    }
+
+    struct Ints {
+        static let iamgeViewTag = 100
+        static let numPagesInPagination = 10
+    }
+
+    struct Constraints {
+        static let maxHeight: CGFloat = 400
+        static let margin: CGFloat = 10
     }
 }

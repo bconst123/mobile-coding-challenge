@@ -68,13 +68,7 @@ extension DetailsView {
 }
 
 // MARK: - MainPresenterDelegate
-extension DetailsView: DetailsPresenterDelegate {
-    func didLoad() {
-        
-    }
-}
+extension DetailsView: DetailsPresenterDelegate { }
 
 // MARK: - MainRouterDelegate
-extension DetailsView: DetailsRouterDelegate {
-    
-}
+extension DetailsView: DetailsRouterDelegate { }

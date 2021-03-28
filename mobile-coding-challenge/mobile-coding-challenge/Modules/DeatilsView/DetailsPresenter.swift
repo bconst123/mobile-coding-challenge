@@ -34,7 +34,7 @@ final class DetailsPresenter {
     
     func getImageUserName() -> String? {
         if let index = selectedIndex, let imageUserName = imageArray?[index].user?.name {
-            return "Created by \(imageUserName)"
+            return "\(DetailsViewConstants.Strings.createdLabel) \(imageUserName)"
         }
         return nil
     }

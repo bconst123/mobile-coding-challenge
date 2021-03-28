@@ -17,8 +17,8 @@ final class MainRouter {
     }
     
     func showImage(arrayImages: [UnsplashModel], index: Int) {
-        let storyboard = UIStoryboard(name: "Details", bundle: nil)
-        if let controller = storyboard.instantiateViewController(withIdentifier: "DetailsView") as? DetailsView {
+        let storyboard = UIStoryboard(name: MainViewConstants.Strings.storyboardId, bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: MainViewConstants.Strings.controllerId) as? DetailsView {
             controller.setup(arrayImages: arrayImages, index: index)
             delegate?.navigationController?.pushViewController(controller, animated: true)
         }

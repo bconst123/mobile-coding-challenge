@@ -11,12 +11,9 @@ import UIKit
 
 // MARK: - Main Protocols
 
-protocol DetailsInteractorDelegate: class {
-}
+protocol DetailsInteractorDelegate: class { }
 
-protocol DetailsPresenterDelegate: class {
-    func didLoad()
-}
+protocol DetailsPresenterDelegate: class { }
 
 protocol DetailsRouterDelegate: class {
     var navigationController: UINavigationController? { get }
@@ -25,6 +22,6 @@ protocol DetailsRouterDelegate: class {
 // MARK: - Constants
 struct DetailsViewConstants {
     struct Strings {
-
+        static let createdLabel = "Created by"
     }
 }
