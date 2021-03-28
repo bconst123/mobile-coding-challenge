@@ -33,16 +33,30 @@ final class MainPresenter {
         }
         return []
     }
+    
+    func showImageDetails(index: Int) {
+        if let imageArray = imageArray {
+            router?.showImage(arrayImages: imageArray, index: index)
+        }
+    }
+    
+    func getViewName() -> String {
+        return MainViewConstants.Strings.viewName
+    }
 }
 
-// MARK: -
+// MARK: - MainInteractorDelegate
 extension MainPresenter: MainInteractorDelegate {
     func errorLoading() {
         print("Error")
     }
     
     func didLoad(response: [UnsplashModel]) {
-        imageArray = response
+        if imageArray != nil {
+            imageArray? += response
+        } else {
+            imageArray = response
+        }
         delegate?.didLoad()
     }
 }

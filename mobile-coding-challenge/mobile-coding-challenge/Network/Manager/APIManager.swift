@@ -12,7 +12,7 @@ class ApiManager {
     
     // MARK: - URL Properties
     private var urltocall = "https://api.unsplash.com/photos"
-    private let clientCredentials = ""
+    private let clientCredentials = "bRw9dmrl2yrSvLlB8i_sT4LtsNwcr_GvvAuA4wHMbZU"
     
     func createArrayFromAPI(offset: Int,completion: @escaping (_ resulCal: [UnsplashModel]?, _ error: Error?) -> Void) {
         guard let finalURL = URL(string: urltocall+"?page=\(String(offset))") else {

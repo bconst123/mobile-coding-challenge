@@ -1,5 +1,5 @@
 //
-//  MainDefinitions.swift
+//  DetailsDefinitions.swift
 //  mobile-coding-challenge
 //
 //  Created by Bruno Augusto Constantino on 3/27/21.
@@ -11,23 +11,20 @@ import UIKit
 
 // MARK: - Main Protocols
 
-protocol MainInteractorDelegate: class {
-    func didLoad(response: [UnsplashModel])
-    func errorLoading()
+protocol DetailsInteractorDelegate: class {
 }
 
-protocol MainPresenterDelegate: class {
+protocol DetailsPresenterDelegate: class {
     func didLoad()
 }
 
-protocol MainRouterDelegate: class {
+protocol DetailsRouterDelegate: class {
     var navigationController: UINavigationController? { get }
 }
 
 // MARK: - Constants
-struct MainViewConstants {
+struct DetailsViewConstants {
     struct Strings {
-        static let cellIdentifier = "collectionCell"
-        static let viewName = "Photos"
+
     }
 }

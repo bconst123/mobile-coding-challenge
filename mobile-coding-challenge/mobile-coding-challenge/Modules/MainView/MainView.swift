@@ -20,6 +20,7 @@ class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.callApi(startAt: 0)
+        title = presenter.getViewName()
     }
     
     func setup() {
@@ -37,30 +38,25 @@ extension MainView: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainViewConstants.Strings.cellIdentifier, for: indexPath)
         
         if let cellImage = cell.viewWithTag(100) as? UIImageView,
-            let imageUrl = presenter.getImageArray()[indexPath.row].links?.download {
+            let imageUrl = presenter.getImageArray()[indexPath.row].urls?.thumb {
             cellImage.downloadImage(from: imageUrl)
         }
-        cell.widthAnchor.constraint(lessThanOrEqualToConstant: (UIScreen.main.bounds.width/2) - 10).isActive = true
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width/2) - 10, height: 600)
+        return CGSize(width: (UIScreen.main.bounds.width/2) - 10, height: 800)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if(indexPath.row == self.characterViewModel.charactersArray.count - 1) {
-//            //last cell
-//            if(self.characterViewModel.charactersArray.count < totalCharacters) {
-//                //call API with offset = charactersArray.count
-//                print("loading new data...")
-//                callApi(startAt: self.characterViewModel.charactersArray.count)
-//            }
-//        }
+        if(indexPath.row == presenter.getImageArray().count - 1) {
+            presenter.callApi(startAt: ((indexPath.row+1)/10)+1)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(indexPath.row)")
+        presenter.showImageDetails(index: indexPath.row)
     }
 }
 

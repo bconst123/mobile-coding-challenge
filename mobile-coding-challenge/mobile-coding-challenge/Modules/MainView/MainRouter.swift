@@ -7,11 +7,20 @@
 //
 
 import Foundation
+import UIKit
 
 final class MainRouter {
     private weak var delegate: MainRouterDelegate?
     
     init(delegate: MainRouterDelegate?) {
         self.delegate = delegate
+    }
+    
+    func showImage(arrayImages: [UnsplashModel], index: Int) {
+        let storyboard = UIStoryboard(name: "Details", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "DetailsView") as? DetailsView {
+            controller.setup(arrayImages: arrayImages, index: index)
+            delegate?.navigationController?.pushViewController(controller, animated: true)
+        }
     }
 }
